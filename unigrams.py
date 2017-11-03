@@ -1,6 +1,6 @@
 import string
 
-final = open("criamCrerCriar.final")
+final = open("fosseIrSer-2.final")
 
 lines = final.readlines()
 
