@@ -10,20 +10,21 @@ def calculateBigram(prob, bigram, V, countSecond):
 	return prob * ( (1 + int(bigram[2])) / (countSecond + V) )
 
 def calculateSmoothing(prob, leme, prevWord, word, V):
-	if prevWord != "Fosse" and prevWord != "fosse" and word != "Fosse" and word != "fosse":
+	if prevWord != wordCaps and prevWord != wordMin and word != wordCaps and word != wordMin:
 		return prob
 
+	countSecond = 0
 	for unigram in unigrams:
-		if word == "fosse" or word == "Fosse":
+		if prevWord == wordMin or prevWord == wordCaps:
 			listUnigram = unigram.split(" ")
 			if leme == listUnigram[0]:
-				countSecond = listUnigram[1]
+				countSecond += int(listUnigram[1])
 		else:
 			listUnigram = unigram.split(" ")
-			if word == listUnigram[0]:
-				countSecond = listUnigram[1]
+			if prevWord == listUnigram[0]:
+				countSecond += int(listUnigram[1])
 
-	return prob * ( 1 / (int(countSecond) + V) )
+	return prob * ( 1 / (countSecond + V) )
 
 fileUnigrams = open(sys.argv[1])
 fileBigrams = open(sys.argv[2])
@@ -37,16 +38,20 @@ parametrization = fileParametrization.readlines()
 phrases = filePhrases.readlines() 
 
 
+parameter = parametrization[0]
+if parameter == "fosse\n":
+	wordMin = "fosse"
+	wordCaps = "Fosse"
+else:
+	wordMin = "criam"
+	wordCaps = "Criam"
 
 lemes = parametrization[1].split(" ")
 
-probability1 = 1
-probability2 = 1
-
 V = 0
 
-for bigram in bigrams:
-	V += int(bigram.split(" ")[2])
+for unigram in unigrams:
+	V += 1
 
 for phrase in phrases:
 	probability1 = 1
@@ -63,17 +68,17 @@ for phrase in phrases:
 			foundAmbiguity = False
 			for bigram in bigrams:
 				bigramWords = bigram.split(" ")
-				if word == "Fosse" or word == "fosse":
+				if word == wordCaps or word == wordMin:
 					if prevWord == bigramWords[0] and lemes[0] == bigramWords[1]:
 						for unigram in unigrams:
-							if lemes[0] in unigram:
+							if prevWord == unigram.split(" ")[0]:
 								probability1 = calculateBigram(probability1, bigramWords, V, int(unigram.split(" ")[1]))
 						foundAmbiguity = True
 						break
-				elif prevWord == "Fosse" or prevWord == "fosse":
+				elif prevWord == wordCaps or prevWord == wordMin:
 					if word == bigramWords[1] and lemes[0] == bigramWords[0]:
 						for unigram in unigrams:
-							if word in unigram:
+							if lemes[0] == unigram.split(" ")[0]:
 								probability1 = calculateBigram(probability1, bigramWords, V, int(unigram.split(" ")[1]))
 						foundAmbiguity = True
 						break
@@ -86,17 +91,17 @@ for phrase in phrases:
 			foundAmbiguity = False
 			for bigram in bigrams:
 				bigramWords = bigram.split(" ")
-				if word == "Fosse" or word == "fosse":
+				if word == wordCaps or word == wordMin:
 					if prevWord == bigramWords[0] and lemes[1] == bigramWords[1]:
 						for unigram in unigrams:
-							if lemes[1] in unigram:
+							if prevWord == unigram.split(" ")[0]:
 								probability2 = calculateBigram(probability2, bigramWords, V, int(unigram.split(" ")[1]))
 						foundAmbiguity = True
 						break
-				elif prevWord == "Fosse" or prevWord == "fosse":
+				elif prevWord == wordCaps or prevWord == wordMin:
 					if word == bigramWords[1] and lemes[1] == bigramWords[0]:
 						for unigram in unigrams:
-							if word in unigram:
+							if lemes[1] == unigram.split(" ")[0]:
 								probability2 = calculateBigram(probability2, bigramWords, V, int(unigram.split(" ")[1]))
 						foundAmbiguity = True
 						break
