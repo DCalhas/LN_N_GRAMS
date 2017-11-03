@@ -6,6 +6,7 @@ lines = final.readlines()
 
 wordsOnly = {}
 
+
 for line in lines:
 	for c in string.punctuation:
 		line = line.replace(c, " ")
