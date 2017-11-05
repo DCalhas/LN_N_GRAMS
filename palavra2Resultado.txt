@@ -1,16 +1,6 @@
-The probability ir 1.0147761556017167e-07
-The probability ser 1.8571257450556348e-07
 Se o Tondela ser ao jogo 
- The probability ir 1.0156953369020806e-07
-The probability ser 9.294039620862665e-08
-Se a Ana ir ao jogo 
- The probability ir 5.078476684510403e-08
-The probability ser 9.7587416019058e-07
-Se o Miguel ser uma boa pessoa 
- The probability ir 5.078476684510403e-08
-The probability ser 1.858807924172533e-07
-O Miguel ser campeão 
- The probability ir 2.2457994230720947e-07
-The probability ser 4.660742153728949e-05
-E para que ser uma excelente oportunidade 
+ Se a Ana ir ao jogo 
+ Se o Miguel ser uma boa pessoa 
+ O Miguel ser campeão 
+ E para que ser uma excelente oportunidade 
  

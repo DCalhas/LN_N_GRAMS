@@ -86,6 +86,7 @@ for phrase in phrases:
 				probability1 = calculateSmoothing(probability1, lemes[0], prevWord, word, V)
 			prevWord = word
 
+	prevWord = "<s>"
 	for word in phraseWords:
 		if word != " " and word != "" and word!= "\n":
 			foundAmbiguity = False
@@ -110,10 +111,6 @@ for phrase in phrases:
 
 			prevWord = word
 
-	print("The probability " + lemes[0], probability1)
-	print("The probability " + lemes[1], probability2)
-
-	
 	if probability2 > probability1:
 		for word in phraseWords:
 			if word != wordMin and word != wordCaps:
