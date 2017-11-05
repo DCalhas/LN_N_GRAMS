@@ -110,13 +110,15 @@ for phrase in phrases:
 
 			prevWord = word
 
-	print("\n\n\nFor the phrase: " + phrase)
-	print("Probability of being " + lemes[0],probability1)
-	print("Probability of being " + lemes[1],probability2)
-
 	if probability2 > probability1:
-		print("So the best fit is: " + lemes[1])
+		for word in phraseWords:
+			if word != wordMin and word != wordCaps:
+				print(word + " ", end = '')
+			else:
+				print(lemes[1] + " ", end = '')
 	else:
-		print("So the best fit is: " + lemes[0])
-
-print("\nThe Smoothing technique used was Laplace Add-One")
+		for word in phraseWords:
+			if word != wordMin and word != wordCaps:
+				print(word + " ", end = '')
+			else:
+				print(lemes[0] + " ", end = '')
