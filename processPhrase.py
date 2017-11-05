@@ -110,6 +110,10 @@ for phrase in phrases:
 
 			prevWord = word
 
+	print("The probability " + lemes[0], probability1)
+	print("The probability " + lemes[1], probability2)
+
+	
 	if probability2 > probability1:
 		for word in phraseWords:
 			if word != wordMin and word != wordCaps:

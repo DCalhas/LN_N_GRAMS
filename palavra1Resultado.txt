@@ -1,6 +1,16 @@
+The probability crer 8.222121263708795e-08
+The probability criar 7.466812259549979e-08
 Eles crer ser possível 
- Senadores crer perfil falso no Facebook como alerta para difusão de informações falsas 
- Estudantes universitários crer projetos para conseguir emprego 
- crer condicões favoráveis ao crescimento 
- Fugas para o exterior crer obstáculo para ação 
+ The probability crer 4.1118945183922985e-08
+The probability criar 3.734163412965613e-08
+Senadores crer perfil falso no Facebook como alerta para difusão de informações falsas 
+ The probability crer 4.110227083469999e-08
+The probability criar 3.732649153674061e-08
+Estudantes universitários crer projetos para conseguir emprego 
+ The probability crer 3.7339546833070605e-08
+The probability criar 3.732649153674061e-08
+crer condicões favoráveis ao crescimento 
+ The probability crer 4.1110606318543975e-08
+The probability criar 3.7334061297749893e-08
+Fugas para o exterior crer obstáculo para ação 
  
