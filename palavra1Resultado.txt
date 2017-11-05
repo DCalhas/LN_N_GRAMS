@@ -1,6 +1,35 @@
+The probability for crer is:  8.222121263708795e-08
+The probability for criar is:  7.466812259549979e-08
+The result of the phrase is:
 Eles crer ser possível 
- Senadores crer perfil falso no Facebook como alerta para difusão de informações falsas 
- Estudantes universitários crer projetos para conseguir emprego 
- criar condicões favoráveis ao crescimento 
- Fugas para o exterior crer obstáculo para ação 
  
+
+
+The probability for crer is:  4.1118945183922985e-08
+The probability for criar is:  3.734163412965613e-08
+The result of the phrase is:
+Senadores crer perfil falso no Facebook como alerta para difusão de informações falsas 
+ 
+
+
+The probability for crer is:  4.110227083469999e-08
+The probability for criar is:  3.732649153674061e-08
+The result of the phrase is:
+Estudantes universitários crer projetos para conseguir emprego 
+ 
+
+
+The probability for crer is:  3.7339546833070605e-08
+The probability for criar is:  7.120978783281081e-07
+The result of the phrase is:
+criar condicões favoráveis ao crescimento 
+ 
+
+
+The probability for crer is:  4.1110606318543975e-08
+The probability for criar is:  3.7334061297749893e-08
+The result of the phrase is:
+Fugas para o exterior crer obstáculo para ação 
+ 
+
+

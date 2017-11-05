@@ -1,6 +1,35 @@
+The probability for ir is:  1.0147761556017167e-07
+The probability for ser is:  1.8571257450556348e-07
+The result of the phrase is:
 Se o Tondela ser ao jogo 
- Se a Ana ir ao jogo 
- Se o Miguel ser uma boa pessoa 
- O Miguel ser campeão 
- E para que ser uma excelente oportunidade 
  
+
+
+The probability for ir is:  1.0156953369020806e-07
+The probability for ser is:  9.294039620862665e-08
+The result of the phrase is:
+Se a Ana ir ao jogo 
+ 
+
+
+The probability for ir is:  5.078476684510403e-08
+The probability for ser is:  9.7587416019058e-07
+The result of the phrase is:
+Se o Miguel ser uma boa pessoa 
+ 
+
+
+The probability for ir is:  5.078476684510403e-08
+The probability for ser is:  1.858807924172533e-07
+The result of the phrase is:
+O Miguel ser campeão 
+ 
+
+
+The probability for ir is:  2.2457994230720947e-07
+The probability for ser is:  4.660742153728949e-05
+The result of the phrase is:
+E para que ser uma excelente oportunidade 
+ 
+
+
