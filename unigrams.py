@@ -1,6 +1,6 @@
 import string
 
-final = open("fosseIrSer-2.final")
+final = open("palavra1Anotado.final")
 
 lines = final.readlines()
 
@@ -12,6 +12,10 @@ for line in lines:
 		line = line.replace(c, " ")
 
 	words = line.split(" ")
+	if not "<s>" in wordsOnly:
+		wordsOnly["<s>"] = 1 
+	else:
+		wordsOnly["<s>"] = wordsOnly["<s>"] +1
 
 	for word in words:
 		if word != " " and word != "" and word!= "\n":
@@ -20,6 +24,11 @@ for line in lines:
 			else:
 				wordsOnly[word] = wordsOnly[word] + 1
 
+	if not "</s>" in wordsOnly:
+		wordsOnly["</s>"] = 1 
+	else:
+		wordsOnly["</s>"] = wordsOnly["<s>"] +1
+		
 	
 
 for word in wordsOnly:
